@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "838727371623",
+    "project_id": "b2papk",
+    "storage_bucket": "b2papk.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:838727371623:android:7bdb34c84ca9121d5cbdc2",
+        "android_client_info": {
+          "package_name": "com.kripton.b2papk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "838727371623-8da9q7741p4644pd45v2v9li47lvpp21.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1tXcxmrvSA897SmBKnn11ZsLelQAO7Ds"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "838727371623-8da9q7741p4644pd45v2v9li47lvpp21.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/purple_500"
+    android:layout_height="match_parent"
+    tools:context=".AsyncData">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/ic_nanumgothic_bold"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:layout_marginTop="50dp"
+        android:padding="5dp"
+        android:text="Total No of Data pending..." />
+
+
+    <TextView
+        android:id="@+id/all_pending"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/ic_nanumgothic_bold"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:layout_marginTop="5dp"
+        android:padding="5dp"
+        android:text="0" />
+
+    <android.widget.Button
+        android:background="@drawable/button_drawable"
+        android:layout_margin="20sp"
+        android:fontFamily="@font/ic_nanumgothic_bold"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:id="@+id/push_all"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="push all data" />
+</LinearLayout>

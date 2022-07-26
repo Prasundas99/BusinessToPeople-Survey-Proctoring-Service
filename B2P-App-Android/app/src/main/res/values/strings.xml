@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">B2P APK</string>
+    <string name="base_url">https://b2p-backend.herokuapp.com</string>
+</resources>
