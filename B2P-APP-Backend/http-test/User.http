@@ -1,0 +1,79 @@
+###### Register Admin User 
+POST http://localhost:5000/user/add/admin
+Content-Type: application/json
+
+{
+    "name": "devAdmin",
+    "password": "devAdmin"
+}
+###### Register worker User 
+POST http://localhost:5000/user/add/worker
+Content-Type: application/json
+
+{
+
+    "name": "test69@test.com",
+    "password": "test69@test.com"
+
+}
+###### Register Client User 
+POST http://localhost:5000/user/add/client
+Content-Type: application/json
+
+{
+    "name": "client",
+    "password": "client"
+}
+
+######################################################################################################################################
+
+## Login Admin User
+POST http://localhost:5000/user/login/admin
+Content-Type: application/json
+
+{
+    "name": "devAdmin",
+    "password": "devAdmin"
+}
+###
+## Login Worker User
+POST http://localhost:5000/user/login/worker
+Content-Type: application/json
+
+{
+
+    "name": "abcd2",
+    "password": "abcd2"
+
+}
+
+### Login Client User
+POST http://localhost:5000/user/login/client
+Content-Type: application/json
+
+{
+    "name": "client",
+    "password": "client"
+}
+
+################################################################################################################################################
+#Get All types of Users
+GET  http://localhost:5000/user
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYmUyMzJmYzlkYTRmMjFhODg2ZDcwYyIsImlhdCI6MTYzOTkwNjk2MCwiZXhwIjoxNjQyNDk4OTYwfQ.I_xGr6cXIwClisxOsVkRX9i0S-XUfTIndSN-u1CobKo
+
+########################################################################################################################################################
+# Delete user with their ids
+DELETE http://localhost:5000/user/61bb083aa51574f430c886c4
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYmIwODNhYTUxNTc0ZjQzMGM4ODZjNCIsImlhdCI6MTYzOTY0NzMyMCwiZXhwIjoxNjQyMjM5MzIwfQ.eAirkGPy_ttXEOmVBKkKWPSostyHjv2XplfvcZjFC1M
+
+########################################################################################################################################################
+# Change user password with their ids
+POST http://localhost:5000/user/61bb083aa51574f430c886c4
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYmIwODNhYTUxNTc0ZjQzMGM4ODZjNCIsImlhdCI6MTYzOTY0NzMyMCwiZXhwIjoxNjQyMjM5MzIwfQ.eAirkGPy_ttXEOmVBKkKWPSostyHjv2XplfvcZjFC1M
+
+{
+    "password": "FUff"
+}

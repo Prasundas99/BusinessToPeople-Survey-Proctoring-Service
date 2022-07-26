@@ -1,0 +1,78 @@
+APIS:
+/ - Home route
+
+//Admin
+admin/auth/register
+admin/auth/login
+admin/auth/ForgetPass
+POST admin/questions/add  && client specific  &&can assign flield workers to questions who cannot see other questions ## CRUD
+GET admin/questions/
+POST client/create ## CRUD
+     field/create  ## CRUD
+POST field/question/:questionid/answer #CRUD
+
+
+//Field Workers
+field/auth/register
+field/auth/login
+field/auth/ForgetPass
+POST field/question/:questionid/answer #CR   --TYPE: Image String
+
+
+
+//Client
+client/auth/register
+client/auth/login
+client/auth/ForgetPass
+
+
+GET Questions and answer to readonly
+
+
+
+
+
+
+ADMIN MODEL:
+email:
+Password: 
+
+
+QuestionModel:
+ClientId
+flieldID
+question: [String]  //Dynimically added
+
+answerModel:
+questionID:
+answer: [String]
+
+
+
+
+
+Question:-
+1question  -- 1answer ? multiple answer
+question protected for field workers and client?
+Admin/client/field workers Login type/field?
+
+
+
+
+
+
+
+
+
+Create - C F
+
+CRUD question
+
+client
+flield
+
+
+
+
+
+

@@ -1,0 +1,148 @@
+## Create a Question 
+# @status done
+
+POST http://localhost:5000/question-set
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMWU0NzExZjAzNWViOGY4MDdhOTg5MCIsImlhdCI6MTY0NjE1MTUxNCwiZXhwIjoxNjQ4NzQzNTE0fQ.RR0WFvB_3x3rwSqMXXi8VXGW0eY5sen1XPotWMQ9DRI
+
+{
+  "setName": "HuiHui",
+  "client": ["621e4895f035eb8f807a98b1"],
+  "worker": ["621e4879f035eb8f807a98ae"],
+    "querry": [{
+        "question": "test question 1",
+        "dataType": "text",
+        "mandatory": "true"
+    },
+    {
+        "question": "test question 2",
+        "dataType": "text",
+        "mandatory": "false"
+    }]
+}
+
+
+### View Question Sets
+# @status done
+# /question-set
+GET http://localhost:5000/question-set
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMWU0NzExZjAzNWViOGY4MDdhOTg5MCIsImlhdCI6MTY0NjE1MTUxNCwiZXhwIjoxNjQ4NzQzNTE0fQ.RR0WFvB_3x3rwSqMXXi8VXGW0eY5sen1XPotWMQ9DRI
+
+
+### viewSingleQuestionSet
+
+# @status done (Will be back again)
+GET http://localhost:5000/question-set/62d6d59c9a2cccc7e108ab1d
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMWU0NzExZjAzNWViOGY4MDdhOTg5MCIsImlhdCI6MTY1ODI0NDE0NCwiZXhwIjoxNjYwODM2MTQ0fQ.SOJSLzoBoMwF7TG2AVMSNU0CRVwjeV42sUL-snQOMaU
+
+
+### editQuestionSet
+# @status
+# /question-set/:questionId
+PUT http://localhost:5000/question-set/62db8dae301b0c9eb49e974a
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMWU0NzExZjAzNWViOGY4MDdhOTg5MCIsImlhdCI6MTY1ODU2NDA0OCwiZXhwIjoxNjYxMTU2MDQ4fQ.AiDlsqSQfMqX75zY1gdouQWyWUMTrJc2h0IGsIjLvRM
+    
+    {
+        "setName": "PosunNigga123",
+        "client": ["62db8dae301b0c9eb49e9741"],
+        "worker": ["62db8dae301b0c9eb49e9745", "62db8dae301b0c9eb49e9747"]
+    }
+
+
+### editSingleQuestion
+# @status done
+#/question-set/:questionSetId/question/:questionId
+PUT http://localhost:5000/question-set/6217746891fba71962c347dd/question/6217746891fba71962c347df
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMWU0NzExZjAzNWViOGY4MDdhOTg5MCIsImlhdCI6MTY0NjE1MTUxNCwiZXhwIjoxNjQ4NzQzNTE0fQ.RR0WFvB_3x3rwSqMXXi8VXGW0eY5sen1XPotWMQ9DRI
+
+    {
+        "question": "krohan",
+        "dataType": "text",
+        "mandatory": "true"
+    }
+
+### deleteSingleQuestion
+# @status done
+#/question-set/:questionSetId/question/:questionId
+DELETE http://localhost:5000/question-set/6217746891fba71962c347dd/question/6217746891fba71962c347e1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMWU0NzExZjAzNWViOGY4MDdhOTg5MCIsImlhdCI6MTY0NjE1MTUxNCwiZXhwIjoxNjQ4NzQzNTE0fQ.RR0WFvB_3x3rwSqMXXi8VXGW0eY5sen1XPotWMQ9DRI
+
+
+### postAnswer   :  /question-set/:questionSetID/answer
+POST http://localhost:5000/question-set/62db8dae301b0c9eb49e974a/answer
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZGI4ZGFlMzAxYjBjOWViNDllOTc0NSIsImlhdCI6MTY1ODU1NjAzOCwiZXhwIjoxNjYxMTQ4MDM4fQ.3uogdDVoNqOq5T2xVDldxqW8zP70cVcuG4Kr1jItxi0
+
+{
+"answerArray": [{
+    "questionId": "62db8dae301b0c9eb49e974c",
+    "answerBody": ["q3", "q3_2nd"],
+    "coordinates": [6,9]
+},
+{
+    "questionId": "62db8dae301b0c9eb49e974e",
+    "answerBody": ["q4", "q4_2nd"],
+    "coordinates": [0,0]
+}]
+}
+
+
+### getAllAnswers
+# @status done
+#  /question-set/answer/:questionSetId/dummy
+GET http://localhost:5000/question-set/answer/621e48d0f035eb8f807a98b4/all
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMWU0NzExZjAzNWViOGY4MDdhOTg5MCIsImlhdCI6MTY0NjIzOTY1NiwiZXhwIjoxNjQ4ODMxNjU2fQ.dUw7pQ5tM-wb_MO9PIt2Cy4khDpH8zrTKbznvUkVRL8
+
+
+
+### getSingleAnswer (get all answers written by single worker)
+# @status done
+
+#  /question-set/answer/:questionId/:workerId
+GET http://localhost:5000/question-set/answer/62d6d59c9a2cccc7e108ab1d/621e4711f035eb8f807a9890
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMWU0NzExZjAzNWViOGY4MDdhOTg5MCIsImlhdCI6MTY1ODI0NDE0NCwiZXhwIjoxNjYwODM2MTQ0fQ.SOJSLzoBoMwF7TG2AVMSNU0CRVwjeV42sUL-snQOMaU
+
+
+
+
+### deleteQuestionSet
+# @status done (Working but delete questions too)
+# /question-set/:questionSetId
+DELETE http://localhost:5000/question-set/6217746891fba71962c347dd
+Content-Type: application/json 
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMWU0NzExZjAzNWViOGY4MDdhOTg5MCIsImlhdCI6MTY0NjE1MTUxNCwiZXhwIjoxNjQ4NzQzNTE0fQ.RR0WFvB_3x3rwSqMXXi8VXGW0eY5sen1XPotWMQ9DRI
+
+
+### 
+
+{
+    // Worker 1 Answers
+    [
+        {
+            question,
+            answers
+        },
+        {
+            question,
+            answers
+        }
+    ],
+    // Worker 2 Answers
+    [
+        {
+            question,
+            answers
+        },
+        {
+            question,
+            answers
+        }
+    ]
+}
